@@ -22,7 +22,25 @@ app.use(express.json());
  * Request Body: Conteudo na hora de criar ou editar um recurso (JSON)
  */
 
+/**
+ * Middleware:
+ *
+ * Interceptador de requisições que interrompe totalmente a requisição ou altera dados da requisição
+ */
+
 const projects = [];
+
+function logRequests(request, response, next) {
+  const { method, url } = request;
+
+  const logLabel = `[${method.toUpperCase()}] ${url}`;
+
+  console.log(logLabel);
+
+  next(); // Próximo middleware
+}
+
+app.use(logRequests);
 
 app.get("/projects", (request, response) => {
   const { title } = request.query;
