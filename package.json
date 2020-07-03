@@ -1,12 +1,12 @@
 {
   "name": "bootcamp-gostack-11-nivel-01-back-end-com-node-js",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": "https://github.com/fabiosvf/bootcamp-gostack-11-nivel-01-back-end-com-node-js.git",
   "author": "Fabio Silva Ferreira <fabiosvf@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon"
   },
   "dependencies": {
     "express": "^4.17.1"
